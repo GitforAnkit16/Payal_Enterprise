@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#navbar {
+    margin:2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.logo img{
+    height: 100px;
+    width: 350px;
+}
+.nav-links{
+    margin-top: 5px;
+}
+#navbar ul{
+    list-style: none;
+    display: flex;
+    
+}
+#navbar ul li a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding:10px 35px;
+}
+#navbar ul li a:after{
+    content: "";
+    position: absolute;
+    background-color: #f1683a;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+#navbar ul li a:hover{
+    color: #1591de;
+}
+#navbar ul li a:hover:after{
+    width: 70%;
+    left: 25px;
+}
+#products,#commercial,#vacuum-cleaners{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 200px;
+}
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 150px;
+    width: 300px;
+    margin-right:58vw;
+}
+.container{
+    width: 280px;
+    height: 300px;
+}
+.card{
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+.front,.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    backface-visibility: hidden;
+}
+.front{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.front h4{
+    margin: 10px 20px;
+}
+.front img{
+    height: 210px;
+    width: 200px;
+    padding: 5px;;
+}
+.back{
+    background-color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.back p{
+    padding: 20px;
+}
+.back button{
+    border:2px solid rgb(3, 81, 169);
+    border-radius: 30px;
+    background-color: transparent;
+    color: rgb(19,98,197);
+    font-size: medium;
+    text-align: center;
+    font-weight: bolder;
+    height: 40px;
+    width: 150px;
+    margin-top: 30px;
+}
+.back a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #0c0b0b;
+}
+.container:hover > .card{
+    cursor:pointer;
+    transform: rotateY(180deg);
+    z-index: 2;
+}
+#contact{
+    position: absolute;
+    padding: 50px;
+    background-color: #a7e0f1;
+    display: flex;   
+    height: 130vh;
+    width: 100%;
+    background-image:url('https://aradhanawaterpurifier.com/wp-content/uploads/2021/11/3334703.png');
+}
+.contact-right h2{
+    font-size: 40px;
+    line-height: 30px;
+    color: #0c0b0b;
+    margin-right: 100px;
+}
+.contact-right{
+    padding: 50px;
+    display: flex;
+    gap:40px;
+    height: 105vh;
+    margin-left: 200px;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right,transparent,#a7e0f1);
+}
+.contact-right select{
+    padding: 10px;
+    border-style: none;
+}
+form{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr;
+    gap: 50px;
+}
+.form-group{
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+input,textarea{
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 5%;
+    color: white;
+    border: 1px solid #ccc;
+}
+input:focus,textarea:focus{
+    border-color: rgb(1, 230, 230);
+    box-shadow: 0 0 0 .25rem rgb(192, 239, 234);
+}
+label{
+    margin-bottom: 0.25rem;
+    display: inline-block;
+    font-size: medium;
+    font-weight: bolder;
+}
+select label{
+    margin-bottom: 0.25rem;
+    display: inline-block;
+    font-size: medium;
+    font-weight: bolder;
+}
+.btn-submit{
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+    color: black;
+    font-size: 2em;
+    line-height: 12px;
+    border: none;
+    outline: none;
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 25vw;
+}
+
+#footer{
+    position: absolute;
+    margin-top: 130vh;
+    padding-top: 10vh;;
+    display: flex;
+    width: 100%;
+    padding-left: 40px;
+    gap: 180px;
+    height: 35vh;
+    background-color: #f5f6f8;
+}
+.footer-social{
+    width: 300px;
+}
+#footer ul{
+    list-style: none;
+}
+#footer a{
+    text-decoration: none;
+    color: black;
+}
+.footer-links,.footer-links ul,.footer-products,.footer-products ul,.footer-address,.footer-address ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    white-space: nowrap;
+}
+#footer img{
+    height: 38px;
+    width: 38px;
+}
+#footer .footer-social{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#footer .socials ul{
+    display: flex;
+    gap:40px
+}
+#footer .footer-address img{
+    height: 18px;
+    width: 18px;
+    margin: 0px 3px;
+}
+#footer .socials li:hover{
+    transform: scale(1.1);
+}
