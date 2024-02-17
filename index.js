@@ -48,5 +48,28 @@ function showSlider(type){
 }
 
 
+var x = window.matchMedia("(max-width: 480px)");
+var con = document.getElementById('content-heading')
+var cons = document.getElementById('content-headings')
+function myFunction(x) {
+    if (x.matches) { 
+      con.innerHTML = "SERVICES";
+      cons.innerHTML = "SERVICES";
+    } 
+  }
+  myFunction(x);
+  x.addEventListener("change", function() {
+    myFunction(x);
+  });
 
 
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0px";
+    sidemenu.style.display= "block";
+    
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+    sidemenu.style.display = "none";
+}
