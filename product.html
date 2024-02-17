@@ -12,12 +12,14 @@
             <a href="#"><img class="logo" src="./images/logo2.png"></a>
         </div>
         <div class="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#commercial">Commerical</a></li>
+            <ul id = "sidemenu">
+                <li><a href="index.html#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#commercial">Commercial Products</a></li>
                 <li><a href="#vacuum-cleaners">Vacuum Cleaners</a></li>
-                <li><a href="#contact" >Contact Us</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </div>
     </div>
     <div id="products">
@@ -291,10 +293,10 @@
             <p>We are the right platform for you to come and get all types of services for water purifiers. Customer satisfaction is our first priority which keeps us at the top in this category.</p>
             <div class="socials">
                 <ul>
-                    <li><a><img src="./twitter.svg" /></a></li>
-                    <li><a><img src="./instagram.svg" /></a></li>
-                    <li><a><img src="./facebook.svg" /></a></li>
-                    <li><a><img src="./linkedin.svg" /></a></li>    
+                    <li><a><img src="./images/twitter.svg" /></a></li>
+                    <li><a><img src="./images/instagram.svg" /></a></li>
+                    <li><a><img src="./images/facebook.svg" /></a></li>
+                    <li><a><img src="./images/linkedin.svg" /></a></li>    
                 </ul>
             </div>
         </div>
@@ -302,30 +304,42 @@
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-products">
             <h3>Products</h3>
             <ul>
                 <li><a href="product.html">Aquaguards</a></li>
-                <li><a href="#">Commercial Aquaguards</a></li>
+                <li><a href="product.html#commercial">Commercial Aquaguards</a></li>
                 <li><a href="product.html#vacuum-cleaners">Vacuum Cleaners</a></li>
-                <li><a href="#">Chimneys</a></li>
             </ul>
         </div>
         <div class="footer-address">
             <h3>Visit Us</h3>
             <ul>
-                <li><img src="./location.svg"> Sundarapada Bhubaneswar</li>
-                <li><img src="./mail.svg">payalenterprise2015@gmail.com</li>
-                <li><img src="./link.svg">info@url</li>
-                <li><img src="./contact.svg">9438200949</li>
+                <li><img src="./images/location.svg"> Sundarapada Bhubaneswar</li>
+                <li><img src="./images/mail.svg">payalenterprise2015@gmail.com</li>
+                <li><img src="./images/link.svg">info@url</li>
+                <li><img src="./images/contact.svg">9438200949</li>
             </ul>
         </div>
     </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0px";
+                sidemenu.style.display= "block";
+
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+                sidemenu.style.display = "none";
+            }
+    </script>
+    <script src="https://kit.fontawesome.com/a52bd45550.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
