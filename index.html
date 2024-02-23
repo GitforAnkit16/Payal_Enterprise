@@ -215,7 +215,7 @@
 <div id="contact"> 
     <div class="contact-right">
         <h2>Contact Us</h2>
-        <form method="post" action = "https://script.google.com/macros/s/AKfycbyHQBIFb2NwfwIzk1ByZtPDVyrrrVs4mnWaJM-Rog1IdXybupvlm9VMVovt7SAQ9MID/exec" name = "contact-us">
+        <form method="post" action = "https://script.google.com/macros/s/AKfycbyBi6220vbFPWxmEDiA-BZrIuhZukHmCUyTIjGF237lWlunMBvHY-lV0kQPES4N4Lf5hw/exec" name = "contact-us">
             <div class="form-group">
                 <label for = "Name">First Name</label>
                 <input type="text" name = "Name" placeholder="First Name">
@@ -271,8 +271,9 @@
                 <label for = "message">Message</label>
                 <textarea name="message" rows="5" placeholder="Your Message"></textarea>
             </div>
+            <button type="submit" class="btn-submit">Submit</button>
         </form>
-        <button type="submit" class="btn-submit">Submit</button>
+        
     </div>
 
 </div>    
@@ -326,7 +327,7 @@
     </div>
 </div>
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyHQBIFb2NwfwIzk1ByZtPDVyrrrVs4mnWaJM-Rog1IdXybupvlm9VMVovt7SAQ9MID/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyBi6220vbFPWxmEDiA-BZrIuhZukHmCUyTIjGF237lWlunMBvHY-lV0kQPES4N4Lf5hw/exec'
     const form = document.forms['contact-us']
     
     form.addEventListener('submit', e => {
@@ -338,7 +339,7 @@
     })
         .catch(error => console.error('Error!', error.message))
     })
-    </script>    
+</script>    
     <script>
         $(document).ready(function(){
         $('.counter').counterUp({
