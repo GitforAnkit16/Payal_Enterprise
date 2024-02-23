@@ -340,6 +340,19 @@
             }
     </script>
     <script src="https://kit.fontawesome.com/a52bd45550.js" crossorigin="anonymous"></script>
-    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyHQBIFb2NwfwIzk1ByZtPDVyrrrVs4mnWaJM-Rog1IdXybupvlm9VMVovt7SAQ9MID/exec'
+        const form = document.forms['contact-us']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+            form.reset()
+            console.log('Success!', response)
+        })
+            .catch(error => console.error('Error!', error.message))
+        })
+        </script>    
 </body>
 </html>
